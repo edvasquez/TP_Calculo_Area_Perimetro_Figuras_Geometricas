@@ -12,6 +12,6 @@ struct Rectangulo{
     double ancho;
 };
 
-Rectangulo getNewRectangulo();
+Rectangulo getRectangulo();
 double getAreaRectangulo(Rectangulo rectangulo);
 double getPerimetroRectangulo(Rectangulo rectangulo);

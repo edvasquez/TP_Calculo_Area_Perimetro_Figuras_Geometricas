@@ -19,4 +19,4 @@ struct Punto{
 #endif /* PUNTO_H */
 
 
-Punto getReadPunto();
+Punto getPunto();

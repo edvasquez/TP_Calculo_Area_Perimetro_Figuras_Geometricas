@@ -12,7 +12,7 @@ struct Triangulo{
      Punto c;
 };
 
-Triangulo getNewTriangulo();
+Triangulo getTriangulo();
 double getAreaTriangulo(Triangulo triangulo);
 double getPerimetroTriangulo(Triangulo triangulo);
 double getLongitudSegmento(Punto origen, Punto fin);

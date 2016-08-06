@@ -11,9 +11,9 @@
 
 
 
-Circulo getNewCirculo(){
-    struct Circulo circulo;
-    circulo.centro = getReadPunto();
+Circulo getCirculo(){
+    Circulo circulo;
+    circulo.centro = getPunto();
     std::cout << "Ingrese el radio del circulo: ";
     std::cin >> circulo.radio;
     

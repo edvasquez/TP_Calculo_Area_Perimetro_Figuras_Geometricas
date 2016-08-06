@@ -11,12 +11,12 @@
 
 
 
-Rectangulo getNewRectangulo()
+Rectangulo getRectangulo()
 {
     Rectangulo rectangulo;
     std::cout << "ingrese el punto origen del Rectangulo" << "\n";
     std::cout << "Punto origen" << "\n";
-    rectangulo.origen = getReadPunto();
+    rectangulo.origen = getPunto();
     std::cout << "Alto: ";
     std::cin >> rectangulo.alto;
     std::cout << "Ancho: ";

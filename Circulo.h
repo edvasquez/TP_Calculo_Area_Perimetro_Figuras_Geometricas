@@ -10,6 +10,6 @@ struct Circulo{
     double radio;
 };
 
-Circulo getNewCirculo();
+Circulo getCirculo();
 double getAreaCirculo(Circulo);
 double getCircunferencia(Circulo);

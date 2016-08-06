@@ -14,8 +14,8 @@ binaries := Rectangulo Circulo Triangulo CalculoAreayPerimetro Punto
 target := calculofiguras
 
 
-calculofiguras: Rectangulo.o Circulo.o Triangulo.o CalculoAreayPerimetro.o Punto.o
-	$(CC) -o calculofiguras  Rectangulo.o Circulo.o Triangulo.o CalculoAreayPerimetro.o Punto.o
+calculofiguras: Rectangulo.o Circulo.o Triangulo.o CalculoAreayPerimetro.o Util.o Punto.o
+	$(CC) -o calculofiguras  Rectangulo.o Circulo.o Triangulo.o CalculoAreayPerimetro.o Util.o Punto.o
 
 CalculoAreayPerimetro.o: CalculoAreayPerimetro.cpp
 	$(CC) -c CalculoAreayPerimetro.cpp
@@ -29,8 +29,12 @@ Circulo.o: Circulo.cpp
 Rectangulo.o: Rectangulo.cpp
 	$(CC) -c Rectangulo.cpp 
 
+Util.o: Util.cpp
+	$(CC) -c Util.cpp
+
 Punto.o: Punto.cpp
 	$(CC) -c Punto.cpp
+
 
 clean:
 	-rm -f $(binaries) *.o $(target)

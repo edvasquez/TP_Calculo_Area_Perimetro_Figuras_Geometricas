@@ -8,47 +8,34 @@
 #include "Circulo.h"
 #include "Triangulo.h"
 #include "Rectangulo.h"
+#include "Util.h"
 
 
 int main(int argc, const char * argv[])
 {
-    int seleccion = 0;
-    std::cout << "1 : area y circunferencia del circulo" << "\n";
-    std::cout << "2 : area y perimetro del triangulo" << "\n";
-    std::cout << "3 : area y perimetro del rectangulo" << "\n";
-    std::cout << "otro : fin" << "\n";
-    std::cout << "ingrese opcion: ";
+    char seleccion;
+    getMenuPrincipal();
+    std::cin >> seleccion;
     
-    
-    if(std::cin >> seleccion){
-        
-        switch(seleccion) {
-                
-            case 1  : {
-                std::cout << "\n" << "Circulo" << "\n";
-                Circulo circulo = getNewCirculo();
-                std::cout << "Area del circulo: "<< getAreaCirculo(circulo) << "\n";
-                std::cout << "Circunferencia del circulo: "<< getCircunferencia(circulo) << "\n";
-                break;
-            }
-            case 2  : {
-                std::cout << "\n" << "Triangulo" << "\n";
-                Triangulo triangulo = getNewTriangulo();
-                std::cout << "Area del triangulo: "<< getAreaTriangulo(triangulo) << "\n";
-                std::cout << "Perimetro del triangulo: "<< getPerimetroTriangulo(triangulo) << "\n";
-                break;
-            }
-            case 3 : {
-                std::cout << "\n" << "Rectangulo" << "\n";
-                Rectangulo rectangulo = getNewRectangulo();
-                std::cout << "Area del rectangulo: "<< getAreaRectangulo(rectangulo) << "\n";
-                std::cout << "Perimetro del rectangulo: "<< getPerimetroRectangulo(rectangulo) << "\n";
-                break;
-            }
-                
-            default :
-                return 0;
+    switch(seleccion) {
+            
+        case 'c'  : {
+            std::cout << "\n" << "Circulo" << "\n";
+            Circulo circulo = getCirculo();
+            getSalidaPantalla(seleccion, getAreaCirculo(circulo), getCircunferencia(circulo));
+            break;
+        }
+        case 't'  : {
+            std::cout << "\n" << "Triangulo" << "\n";
+            Triangulo triangulo = getTriangulo();
+            getSalidaPantalla(seleccion, getAreaTriangulo(triangulo), getPerimetroTriangulo(triangulo));
+            break;
+        }
+        case 'r' : {
+            std::cout << "\n" << "Rectangulo" << "\n";
+            Rectangulo rectangulo = getRectangulo();
+            getSalidaPantalla(seleccion, getAreaRectangulo(rectangulo), getPerimetroRectangulo(rectangulo));
+            break;
         }
     }
-
 }

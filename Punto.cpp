@@ -8,7 +8,7 @@
 #include "Punto.h"
 
 
-Punto getReadPunto()
+Punto getPunto()
 {
     Punto punto;
     std::cout << "ingrese el valor X: ";
